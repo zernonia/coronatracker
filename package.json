@@ -1,0 +1,28 @@
+{
+  "name": "coronatracker",
+  "version": "1.0.0",
+  "description": "My premium Nuxt.js project",
+  "author": "zernonia",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@trevoreyre/autocomplete-vue": "^2.1.1",
+    "apexcharts": "^3.17.0",
+    "leaflet": "^1.6.0",
+    "nuxt": "^2.0.0",
+    "nuxt-leaflet": "0.0.21",
+    "vue-apexcharts": "^1.5.2",
+    "vue-table-dynamic": "^0.2.1",
+    "vue2-leaflet": "^2.5.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}

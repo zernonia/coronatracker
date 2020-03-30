@@ -18,7 +18,7 @@
   justify-content: space-around;
   text-align: center;
   width: 100vw;
-  transition: all 1.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s ;
   
 }
 
@@ -26,7 +26,22 @@ body {
   background: whitesmoke;
 }
 
-*{
+
+
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
   font-family: Poppins, Helvetica, sans-serif;
 }
 
@@ -35,9 +50,52 @@ body {
   margin-right: 50px;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s ;
 }
-.page-enter, .page-leave-active {
-  opacity: 0
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.8s;
+}
+.bounce-leave-active {
+  animation: bounce-out 0.5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
 }

@@ -47,6 +47,7 @@ import SideBar from '~/components/sidebar.vue';
 import countrynames from '~/static/convertcode'
 
 export default {
+  transitions: 'bounce',
   components: {
     GlobalData,
     LineDaily,
@@ -165,8 +166,6 @@ export default {
   methods: {
   onRowClick(params) {
     // params.row - row object 
-    console.log(params)
-
     this.gotocountry(params.row.country)
     // params.pageIndex - index of this row on the current page.
     // params.selected - if selection is enabled this argument 
@@ -175,7 +174,7 @@ export default {
   },
   gotocountry(result){
       const country_code = this.getCountryCode(`${result}`)
-      window.location = `/country/${country_code}`
+      this.$router.push({ path: `/country/${country_code}`})
     },
   getCountryCode(countryName) {
     if (this.isoCountries.hasOwnProperty(countryName)) {

@@ -66,7 +66,7 @@ data(){
 // },
 methods: {
     gotopage(countrycode){
-        window.location = `/country/${countrycode}`
+        this.$router.push({ path: `/country/${countrycode}`})
     },
     searchfilter(nameKey, myArray){
     for (var i=0; i < myArray.length; i++) {

@@ -33,7 +33,7 @@ export default {
       this.$nuxt.$loading.start()
 
       setTimeout(() => {
-        this.$nuxt.$loading.finish()}, 6000)
+        this.$nuxt.$loading.finish()}, 1000)
     })
   }
 }
@@ -49,7 +49,6 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 200px;
   background: white;
   z-index: 9999;
   animation: fadeIn 0.5s;

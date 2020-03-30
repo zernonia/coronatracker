@@ -14,7 +14,7 @@ export default {
       options: {
         chart: {
             fontFamily: 'Poppins, Helvetica, sans-serif',
-            height: '380px',
+            height: '100%',
             width: "100%",
             type: "area",
             animations: {

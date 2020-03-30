@@ -1,15 +1,12 @@
 <template>
-  <div class="container">
+  <div>
     <side-bar />
     <div class="mainBar">
-        <svg class=" absolute z-0 top-0 right-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0099ff" fill-opacity="1" d="M0,224L80,197.3C160,171,320,117,480,122.7C640,128,800,192,960,224C1120,256,1280,256,1360,256L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
         <div>
             <global-data :totalConfirmed="Confirmed" :totalDeaths="Deaths" :totalRecovered="Recovered"  :totalNewCases="NewCases" :totalNewDeaths="NewDeaths" :totalNewRecovered="NewRecovered" :totalActiveCases="ActiveCases" />
             <div class=" w-full flex relative">
                 <h1 class="absolute text-gray-900 z-10 font-extrabold text-6xl top-0 left-0"><span class="underline-magic">{{ country }}</span></h1>
-                <line-daily-country :series="series" :completed="completed" />
+                <line-daily-country style="height:450px" :series="series" :completed="completed" />
                 <ratio-data :totalConfirmed="Confirmed" :totalDeaths="Deaths" :totalRecovered="Recovered" :completed="completed"/>
             </div>
         </div>
@@ -101,10 +98,11 @@ export default {
                 this.completed = true
             } 
 
-        }
+        },
         
+
         ).catch( e => { console.log(e) })
-        
+
     }
 }
 </script>

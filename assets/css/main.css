@@ -18,12 +18,16 @@
   justify-content: space-around;
   text-align: center;
   width: 100vw;
-  transition: all 0.5s ;
-  
+  transition: all 0.5s ; 
+}
+
+.sidebar:hover + .mainBar {
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
 body {
-  background: whitesmoke;
+  background: #f2f9ff;
 }
 
 
@@ -48,6 +52,7 @@ html {
 
 .mainBar {
   margin-right: 50px;
+  transition: 0.5s;
 }
 
 

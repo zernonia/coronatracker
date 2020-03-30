@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
+  <div>
     <side-bar></side-bar>
     <div class="mainBar">
       <global-data :totalConfirmed="totalConfirmed" :totalDeaths="totalDeaths" :totalRecovered="totalRecovered"  :totalNewCases="totalNewCases" :totalNewDeaths="totalNewDeaths" :totalNewRecovered="0" />
       <div class=" w-full flex relative">
         <h1 class="absolute text-gray-900 z-10 font-extrabold text-6xl top-0 left-0"><span class="underline-magic">Corona Tracker</span></h1>
-        <line-daily />
+        <line-daily style="height: 450px" />
         <ratio-data :totalConfirmed="totalConfirmed" :totalDeaths="totalDeaths" :totalRecovered="totalRecovered" :completed="completed"/>
       </div>
       <client-only>
-        <div class=" p-6 rounded-lg shadow-xl bg-white w-auto block relative m-6">
+        <div class=" p-8 rounded-lg shadow-xl bg-white w-auto block relative m-6">
           <map-data :geodata="geodata" :completed="completed2" />
         </div>
       </client-only>
@@ -192,5 +192,4 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-
 </style>

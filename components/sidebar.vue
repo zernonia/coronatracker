@@ -12,6 +12,9 @@
         <div id="autocomplete-id">
             <autocomplete :search="search" :auto-select="true" placeholder="Search country..." @submit="gotocountry"></autocomplete>
         </div>
+        <client-only>
+            <lottie-player class=" m-20" :src="animation" :options="options" id="loading" />
+        </client-only>
       </div>
   </div>
 </template>
@@ -19,12 +22,21 @@
 <script>
 import countriesdata from '~/static/countries'
 import countrynames from '~/static/convertcode'
+import animation from '~/static/loading.json'
+
 
 export default {
 data(){
     return{
         countries: countriesdata,
-        isoCountries : countrynames
+        isoCountries : countrynames,
+        options:{
+            autoplay: true,
+            loop: true,
+            width: '300px',
+            background: 'none'
+        },
+        animation
     }
 },
 methods: {
@@ -61,7 +73,7 @@ methods: {
   top: 0;
   right: 0;
   background-color: #ffffff;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   /* transform: translateX(150px); */
   padding-top: 60px;
@@ -91,6 +103,12 @@ methods: {
   width: 200px;
   max-width: 200px;
   margin: 0 auto;
+}
+
+#loading{
+    position: absolute;
+    left: -100px;
+    top: 250px;
 }
 
 </style>

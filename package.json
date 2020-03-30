@@ -16,13 +16,15 @@
     "@trevoreyre/autocomplete-vue": "^2.1.1",
     "apexcharts": "^3.17.0",
     "leaflet": "^1.6.0",
+    "lottie-player-vue": "0.0.12",
     "nuxt": "^2.0.0",
     "nuxt-leaflet": "0.0.21",
     "vue-apexcharts": "^1.5.2",
+    "vue-good-table": "^2.19.1",
     "vue-table-dynamic": "^0.2.1",
     "vue2-leaflet": "^2.5.2"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.4.0"
   }
 }

@@ -18,23 +18,26 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  // loading: '~/components/loading.vue',
+    loading: false,
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/css/style.css'
+    '~/assets/css/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     { src: '~plugins/vue-autocomplete.js', ssr: false },
+    { src: '~plugins/vue-table.js', ssr: false },
+    { src: '~plugins/lottie-vuejs.js', ssr: false },
     { src: '~plugins/vue-leaflet.js', ssr: false },
     {
       src: '~/plugins/vue-apexcharts',
       ssr: false
-    }
+    },
   ],
   /*
   ** Nuxt.js dev-modules

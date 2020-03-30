@@ -23,45 +23,47 @@ import axios from 'axios'
 import geojson from '~/static/geojson.json'
 
 export default {
+props:{
+    geodata : Array,
+    completed : Boolean
+},
 data(){
     return{
-        geodata: [],
-        completed: false,
         geojson,
         
     }
 },
-mounted() {
-    axios.get('https://api.coronatracker.com/v2/analytics/country').then( res => {
-        for (var i = 0; i < res.data.length; i++){
-            if (res.data[i].lat != undefined && res.data[i].lng != undefined){
+// mounted() {
+//     axios.get('https://api.coronatracker.com/v2/analytics/country').then( res => {
+//         for (var i = 0; i < res.data.length; i++){
+//             if (res.data[i].lat != undefined && res.data[i].lng != undefined){
 
-                var temp = {
-                    position: {
-                        lat: 0,
-                        lng: 0
-                    },
-                    confirmed:0,
-                    deaths:0,
-                    recovered:0,
-                    country: "",
-                    code: "",
-                }
-                temp.position.lat = res.data[i].lat,
-                temp.position.lng = res.data[i].lng,
-                temp.confirmed = res.data[i].confirmed,
-                temp.deaths = res.data[i].deaths,
-                temp.recovered = res.data[i].recovered,
-                temp.country = res.data[i].countryName
-                temp.code = res.data[i].countryCode
+//                 var temp = {
+//                     position: {
+//                         lat: 0,
+//                         lng: 0
+//                     },
+//                     confirmed:0,
+//                     deaths:0,
+//                     recovered:0,
+//                     country: "",
+//                     code: "",
+//                 }
+//                 temp.position.lat = res.data[i].lat,
+//                 temp.position.lng = res.data[i].lng,
+//                 temp.confirmed = res.data[i].confirmed,
+//                 temp.deaths = res.data[i].deaths,
+//                 temp.recovered = res.data[i].recovered,
+//                 temp.country = res.data[i].countryName
+//                 temp.code = res.data[i].countryCode
                 
-                this.geodata.push(temp)
-            }
-        }
-    }).catch(e => console.log(e)).finally( () => {
-        this.completed = true
-    })
-},
+//                 this.geodata.push(temp)
+//             }
+//         }
+//     }).catch(e => console.log(e)).finally( () => {
+//         this.completed = true
+//     })
+// },
 methods: {
     gotopage(countrycode){
         window.location = `/country/${countrycode}`

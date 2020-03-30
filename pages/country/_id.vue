@@ -70,7 +70,6 @@ export default {
             this.NewCases = res.data[0].dailyConfirmed,
             this.NewDeaths = res.data[0].dailyDeaths,
             this.ActiveCases = res.data[0].activeCases,
-            console.log(res.data[0])
             this.country = res.data[0].country
 
         }).catch( e => { console.log(e) })

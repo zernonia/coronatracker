@@ -57,7 +57,7 @@ methods: {
   height: 100%;
   width: 50px;
   position: fixed;
-  z-index: 100000;
+  z-index: 1000;
   top: 0;
   right: 0;
   background-color: #ffffff;

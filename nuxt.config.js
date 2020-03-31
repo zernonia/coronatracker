@@ -1,3 +1,4 @@
+import whitelister from 'purgecss-whitelister'
 
 export default {
   mode: 'universal',
@@ -16,6 +17,12 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins&display=swap' }
     ]
   },
+  purgeCSS: {
+		whitelist: () => whitelister([
+			'./assets/css/*.css',
+			'./node_modules/*.css'
+		])
+	},
   /*
   ** Customize the progress-bar color
   */

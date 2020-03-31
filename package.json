@@ -19,6 +19,7 @@
     "lottie-player-vue": "0.0.12",
     "nuxt": "^2.12.0",
     "nuxt-leaflet": "0.0.21",
+    "purgecss-whitelister": "^2.4.0",
     "vue-apexcharts": "^1.5.2",
     "vue-good-table": "^2.19.1",
     "vue-table-dynamic": "^0.2.1",

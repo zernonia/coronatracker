@@ -71,16 +71,20 @@ export default {
 
         }).catch( e => { console.log(e) })
 
-        // Datetime
-        const d = new Date()
-        const date = d.getDate()
-        const m = d.getMonth() + 1
-        const month = `0${m}`
-        const year = d.getFullYear()
+        // Datetime YYYY-MM-DD
+        const d = new Date().toISOString().slice(0,10); 
+        const date = d.slice(9,10)
+        const month = d.slice(6,7)
+        const year = d.slice(0,4)
+
+        const d2 = new Date(Date.now() - 12096e5).toISOString().slice(0,10)
+        const date2 = d.slice(9,10)
+        const month2 = d.slice(6,7)
+        const year2 = d.slice(0,4)
 
         var series
 
-        const urldate = `https://api.coronatracker.com/v3/analytics/trend/country?countryCode=${slug}&startDate=${year}-${month}-${date - 14}&endDate=${year}-${month}-${date + 1}`
+        const urldate = `https://api.coronatracker.com/v3/analytics/trend/country?countryCode=${slug}&startDate=${d2}&endDate=${d}`
         axios.get(urldate).then( res => {
             for (var i = 0; i < res.data.length; i++){
 

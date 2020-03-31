@@ -3,7 +3,7 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/* purgecss start ignore */
 
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -17,6 +17,6 @@ html {
   box-sizing: border-box;
 }
 
-
+/* purgecss end ignore */
 
 </style>

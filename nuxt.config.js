@@ -17,12 +17,15 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins&display=swap' }
     ]
   },
+  
   purgeCSS: {
-		whitelist: () => whitelister([
-			'./assets/css/*.css',
-			'./node_modules/*.css'
-		])
-	},
+    whitelist: () => whitelister([
+        './assets/css/*.css',
+        './node_modules/vue-good-table/dist/*.css',
+        './node_modules/leaflet/dist/*.css',
+        './node_modules/@trevoreyre/autocomplete-vue/dist/*.css',
+    ])
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -46,6 +49,7 @@ export default {
       src: '~/plugins/vue-apexcharts',
       ssr: false
     },
+    // '~/plugins/whitelist.js',
   ],
   /*
   ** Nuxt.js dev-modules

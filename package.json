@@ -14,7 +14,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@trevoreyre/autocomplete-vue": "^2.1.1",
-    "apexcharts": "^3.17.0",
+    "apexcharts": "^3.24.0",
     "leaflet": "^1.6.0",
     "lottie-player-vue": "0.0.12",
     "nuxt": "^2.12.0",
